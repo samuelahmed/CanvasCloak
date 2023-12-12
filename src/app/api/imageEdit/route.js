@@ -3,7 +3,8 @@ import fs from "fs";
 import path from "path";
 
 //increase timeout to 25s instead of 10s
-// export const runtime = 'edge';
+//will fail locally
+export const runtime = 'edge';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
