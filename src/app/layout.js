@@ -4,8 +4,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'openAI API tests',
-  description: 'openAI API tests with JS',
+  title: 'Canvas Cloak',
+  description: 'See how outfits will look on you',
 }
 
 export default function RootLayout({ children }) {

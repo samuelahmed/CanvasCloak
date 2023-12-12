@@ -5,6 +5,7 @@ import Embedding from "./embedding";
 import Completion from "./completion";
 import ImageC from "./image";
 import Speech from "./speech";
+import ImageEdit from "./imageEdit";
 
 export default function HomeClientWrapper() {
   
@@ -37,11 +38,19 @@ export default function HomeClientWrapper() {
         >
           Speech
         </button>
+        <button
+          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          onClick={() => setSelectedComponent("ImageEdit")}
+        >
+          Image Edit
+        </button>
+
       </div>
       {selectedComponent === "Embedding" && <Embedding />}
       {selectedComponent === "Completion" && <Completion />}
       {selectedComponent === "Image" && <ImageC />}
       {selectedComponent === "Speech" && <Speech />}
+      {selectedComponent === "ImageEdit" && <ImageEdit />}
     </div>
   );
 }
