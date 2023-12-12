@@ -1,5 +1,6 @@
 import OpenAI from "openai";
 import fs from "fs";
+import path from "path";
 
 //increase timeout to 25s instead of 10s
 // export const runtime = 'edge';
@@ -10,11 +11,13 @@ const openai = new OpenAI({
 
 export async function POST(request) {
   const { input } = await request.json();
+  console.log("Current directory: " + process.cwd());
+
+  const dir = path.resolve('public/chiMask.png')
 
   const result = await openai.images.edit({
-    // image: fs.createReadStream("./chiMask.png"),
-
-    image: fs.createReadStream("public/chiMask.png"),
+    
+    image: fs.createReadStream(dir),
     prompt: input,
   });
 
