@@ -4,9 +4,7 @@ import { useState } from "react";
 
 export default function ImageEdit() {
   const [result, setResult] = useState("");
-  const [clientContent, setClientContent] = useState(
-    "Give Chi a yellow dress"
-  );
+  const [clientContent, setClientContent] = useState("Give Chi a yellow dress");
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchData = async () => {
@@ -50,14 +48,14 @@ export default function ImageEdit() {
       {/* <pre className="overflow-auto max-w-7xl">
         {JSON.stringify(result, null, 2)}
       </pre> */}
-{result.image && result.image.data[0] && result.image.data[0].url && (
-  <img
-    src={result.image.data[0].url}
-    alt="Image"
-    width={500}
-    height={500}
-  />
-)}
+      {result.image && result.image.data[0] && result.image.data[0].url && (
+        <img
+          src={result.image.data[0].url}
+          alt="Image"
+          width={500}
+          height={500}
+        />
+      )}
     </>
   );
 }
