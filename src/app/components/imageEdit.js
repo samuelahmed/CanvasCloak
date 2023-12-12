@@ -30,6 +30,9 @@ export default function ImageEdit() {
     <>
       <div className="flex flex-col space-y-2">
         <h1 className="text-3xl font-bold">Image Edit (dall-e-2)</h1>
+        <h1 className="text-1xl font-bold text-center">
+          Type below to give Chi a custom outfit
+        </h1>
         <input
           type="text"
           value={clientContent}
@@ -45,9 +48,6 @@ export default function ImageEdit() {
           {isLoading ? "Loading..." : "Fetch Result"}
         </button>
       </div>
-      {/* <pre className="overflow-auto max-w-7xl">
-        {JSON.stringify(result, null, 2)}
-      </pre> */}
       {result.image && result.image.data[0] && result.image.data[0].url && (
         <img
           src={result.image.data[0].url}
