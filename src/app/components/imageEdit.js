@@ -52,8 +52,8 @@ export default function ImageEdit() {
         <img
           src={result.image.data[0].url}
           alt="Image"
-          width={500}
-          height={500}
+          width={1024}
+          height={1024}
         />
       )}
     </>
